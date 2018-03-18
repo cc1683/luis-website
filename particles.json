@@ -1,0 +1,38 @@
+{
+    "particles":{
+        "number":{
+            "value": 20
+        },
+        "color":{
+            "value":"#000"
+        },
+        "shape":{
+            "type":"star"
+        },
+        "opacity":{
+            "value": 0.65,
+            "random": true,
+            "anim":{
+                "enable":true,
+                "speed": 4
+            }
+        },
+        "size":{
+            "value": 12,
+            "random": true
+        },
+        "interactivity": {
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            }
+        }
+    }    
+}
