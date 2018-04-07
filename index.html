@@ -8,17 +8,16 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-115575154-1');
-    </script>
-    
+    </script>   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Poor+Story|Ubuntu+Mono" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <title>Luis | Home</title>
 </head>
@@ -26,58 +25,30 @@
     <a href="javascript: " id="return-to-top"> <i class="fas fa-arrow-up"></i></a>
 
     <script>
-        // ===== Scroll to Top ==== 
+        // Scroll Top
         $(window).scroll(function() {
-            if ($(this).scrollTop() >= 160) {        // If page is scrolled more than 50px
-                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            if ($(this).scrollTop() >= 220) {       
+                $('#return-to-top').fadeIn(200);    
             } else {
-                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+                $('#return-to-top').fadeOut(200);  
             }
         });
-        $('#return-to-top').click(function() {      // When arrow is clicked
+        $('#return-to-top').click(function() {      
             $('body,html').animate({
-                scrollTop : 0                       // Scroll to top of body
+                scrollTop : 0                       
             }, 750);
         });
-        //  $('#go-to-bottom').click(function() {
-        //     $('html, body').animate({
-        //         scrollTop: parseInt($('#footer-contact').offset().top)
-        //     }, 750);
-        //  }); 
-        $(document).ready(function() {      
-            $('#go-to-bottom').click(function(){
-                $('html, body').animate({scrollTop:$(document).height()}, 750);
-                return false;
-            });
-        });
-        // $(function(){
-        //     $('#go-to-bottom').hover(function(){
-        //         animate('#go-to-bottom', 'pulse');
-        //         return false;
-        //     });
-
-        //     function animate(element, animation){
-        //         $(element).addClass('animated '+animation);
-
-        //         var delay = setTimeout(function() {
-        //             $(element).removeClass('animated '+animation);
-        //         }, 1000);
-        //     }
-        // })
     </script>
 
     <header class="ls-header container">
-        <div id="particles-js" class="ls-header-bg">
-            <!-- <video src="img/ls-video-bg.mp4" autoplay="true" loop="true"></video> -->
-        </div>
+        <div id="particles-js" class="ls-header-bg"></div>
         <div class="ls-header-overlay"></div>
         <div class="ls-header-content">
-            <h1>HOLA, My name is Luis</h1>
-            <h2>Glad you're here! keep scrolling for a little about me</h2>
+            <h1>Hola amigo, I'm <em>Luis</em></h1>
+            <h2>Glad you're here :) keep scrolling for a little about me</h2>
             <p id="ls-icon-animated" class="fa"></p>
-            <!-- <button id="go-to-bottom" class="btn btn-raised btn-primary">CONTACT ME NOW</button> -->
 
-            <!--Icon change in home page -->
+            <!--Change Icon in header page -->
             <script>
             function iconChange() {
                 let icon = document.getElementById('ls-icon-animated');
@@ -90,7 +61,13 @@
 
             iconChange();
 
-            setInterval(iconChange, 3000);          
+            setInterval(iconChange, 3000);  
+
+            $("#ls-icon-animated").click(function() {
+                $('html, body').animate({
+                    scrollTop: $(".ls-about").offset().top
+                }, 800);
+            });        
             </script>
         </div>
 
@@ -99,37 +76,26 @@
     <section class="ls-about my-5 my-md-3">
         <div class="container">
             <div class="row">
-                <div class="col-12 ls-about-title text-center my-5 ">
-                    <h3>ABOUT LUIS</h3>
+                <div class="col-12 ls-about-title text-center my-3 ls-sub-title ">
+                    <h2>About Luis</h2>
                     <div class="ls-inner-line">&nbsp;</div>
                 </div>
-                <div class="col-lg-6 col-md-6 ls-about-profile-holder d-flex my-3">
-                    <img src="img/ls-profile.png" class="img-fluid img-circle" alt="profile picture">
-                </div>
-                <div class="col-lg-6 ls-about-bio d-flex my-3">
+                <div class="col-lg-12 ls-about-bio d-flex my-3">
                     <div class="pl-lg-5 pt-1 pt-lg-0 text-center">
-                        <div class="ls-about-scroll-animated d-flex justify-content-between">
-                            <div><img src="img/ls-student-icon.png" alt="student icon" class="img-fluid" title="Student"></div>
-                            <div><img src="img/ls-programmer-icon.png" alt="programmer icon" class="img-fluid" title="Web developer"></div>
-                            <div><img src="img/ls-footballfans-icon.png" alt="football fans icon" class="img-fluid" title="Football fan"></div>
+                        <div class="ls-about-scroll-animated d-flex justify-content-center">
+                            <div><img src="img/ls-student.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
+                            <div><img src="img/ls-read.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
+                            <div><img src="img/ls-programmer.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
                         </div>
-                        <p class="my-3 ls-about-desc" style="text-align: left">Luis is a student, learner, developer that has passion in developing beautiful website. He currently study at University Malaysia Sarawak <img src="img/ls-malaysia.png" alt=""> as a Computer Networking student. <img src="img/ls-network.png" alt=""> (He is Madridista <img src="img/ls-real-madrid.png" alt=""> ) </p>
+                        <p class="mt-3 ls-about-desc mx-2" style="text-align: center ; font-size: 1.6rem">Hey, my name is Luis, I'm 24 years old, and I'm from Johor, Malaysia. I describe myself as a student, developer that has passion in developing custom website. However, I'm still consider as a newbie to web programming so now I only focusing on the front-end development.</p>
                     </div>  
                 </div>
             </div>
         </div> 
         
         <!-- Particle JS -->
-        <script 
-        src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-        <!-- <script>
-            $(function(){
-                if($('body').width() > 1280) { $('head').append('<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"><\/script>'); }
-            }); -->
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
-            /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
             particlesJS.load('particles-js', 'particles.json', function() {
             console.log('callback - particles.js config loaded');
             }); 
@@ -138,66 +104,67 @@
     </section>
 
     <section class="ls-services w-100 p-5 mx-0">
-        <div class="col-12 ls-services-title text-center my-3 ">
-            <h3>What I'm interested in</h3>
+        <div class="col-12 ls-services-title text-center my-3 ls-sub-title ">
+            <h2>What I'm Interested In</h2>
             <div class="ls-inner-line-service" style="border-bottom: 3px solid #fdfeff; border-bottom-style: dotted;">&nbsp;</div>
         </div>
+        <div class="services-wrapper" style="margin: 0 auto ; max-width: 1400px">
+            <div class="ls-services-holder d-flex flex-wrap py-4">
+                <div class="ls-services-list col-md-6 order-md-1">
+                    <img src="img/ls-html.png" class="img-fluid" alt="web design">
+                </div>
+                <div class="ls-services-text col-6 p-3 order-md-2">
+                    <h3>Front-End Web Development</h3>
+                    <p>Creates the look, layout, and features of a website. Governs everything involved with the visual aesthetics, usability of a website and everything else related to the visual aspects of the UI/UX.</p>
+                </div>
+            </div>
 
-        <div class="ls-services-holder d-flex flex-wrap py-4">
-            <div class="ls-services-list col-md-6 order-md-1">
-                <img src="img/ls-design-icon.png" class="img-fluid" alt="web design">
+            <div class="ls-services-holder d-flex flex-wrap py-4">
+                <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
+                    <h3>Data Analysis</h3>
+                    <p>Data Analysis is the process of systematically applying statistical and/or logical techniques to describe and illustrate, condense and recap, and evaluate data.</p>
+                </div>
+                <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
+                    <img src="img/ls-analysis.png" class="img-fluid" alt="mobile application">
+                </div>
             </div>
-            <div class="ls-services-text col-6 p-3 order-md-2">
-                <h3>Front-End Web Design</h3>
-                <p>Creates the look, layout, and features of a website. Governs everything involved with the visual aesthetics, usability of a website and everything else related to the visual aspects of the UI/UX (user interface and user experience).</p>
-            </div>
-        </div>
 
-        <div class="ls-services-holder d-flex flex-wrap py-4">
-            <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
-                <h3>Mobile Application</h3>
-                <p>Interested in mobile technology such as building apps for Google’s Android and Microsoft’s Windows Phone platforms.</p>
-            </div>
-            <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
-                <img src="img/ls-smartphone-icon.png" class="img-fluid" alt="mobile application">
-            </div>
-        </div>
-
-        <div class="ls-services-holder d-flex flex-wrap py-4">
-            <div class="ls-services-list col-md-6 order-md-1">
-                <img src="img/ls-google-icon.png" class="img-fluid" alt="google seo">
-            </div>
-            <div class="ls-services-text col-6 p-3 order-md-2">
-                <h3>Google SEO</h3>
-                <p>SEO stands for “search engine optimization.” It is the process of getting traffic from the “free,” “organic,” “editorial” or “natural” search results on search engines.</p>
-            </div>
-        </div> 
+            <div class="ls-services-holder d-flex flex-wrap py-4">
+                <div class="ls-services-list col-md-6 order-md-1">
+                    <img src="img/ls-seo.png" class="img-fluid" alt="google seo">
+                </div>
+                <div class="ls-services-text col-6 p-3 order-md-2">
+                    <h3>Search Engine Optimization</h3>
+                    <p>SEO is the process of getting traffic from the “free,” “organic,” “editorial” or “natural” search results on search engines.</p>
+                </div>
+            </div> 
         
-        <div class="ls-services-holder d-flex flex-wrap py-4">
-            <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
-                <h3>Looking for a Team?</h3>
-                <p>I am ready to be your team member. </p>
-            </div>
-            <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
-                <img src="img/ls-team-icon.png" class="img-fluid" alt="team">
-            </div>
-        </div>        
-
+            <div class="ls-services-holder d-flex flex-wrap py-4">
+                <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
+                    <h3>Looking for a Team?</h3>
+                    <p>I am ready to be your team member. </p>
+                </div>
+                <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
+                    <img src="img/ls-team.png" class="img-fluid" alt="team">
+                </div>
+            </div>     
+        </div>
     </section>
 
     <section class="ls-follow my-5 p-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 ls-follow-title text-center my-3">
+                <div class="col-12 ls-follow-title text-center my-3 ls-sub-title">
                     <h3>Let's Connect</h3>
                     <div class="ls-inner-line">&nbsp;</div>
                 </div>
                 <div class="ls-connect-animated col-12 col-md-12 text-center d-flex justify-content-center">
                     <div class="d-flex justify-content-between">
-                        <div class="m-1"><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank" ><img src="img/ls-facebook-icon.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://www.instagram.com/luisychun/" target="_blank"><img src="img/ls-instagram-icon.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><img src="img/ls-linkedin-icon.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://plus.google.com/101939838670246490695" target="_blank"><img src="img/ls-google-plus-icon.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1"><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank" ><img src="img/ls-facebook.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1"><a href="https://www.instagram.com/luisychun/" target="_blank"><img src="img/ls-instagram.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1"><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><img src="img/ls-linkedin.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1"><a href="https://plus.google.com/101939838670246490695" target="_blank"><img src="img/ls-google-plus.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1"><a href="https://github.com/cc1683" target="_blank"><img src="img/ls-github.png" class="img-fluid" alt=""></a></div>
                     </div>
                 </div>
             </div>
@@ -205,80 +172,65 @@
     </section>
 
     <section class="ls-portfolio my-5 p-5">
-        <div class="container">
+        <div class="container"> <!-- For: 3 items in one row -> style="max-width: 1200px" -->
             <div class="row">
-                <div class="col-12 ls-portfolio-title text-center my-3 ">
-                    <h3>MY WORKS</h3>
+                <div class="col-12 ls-portfolio-title text-center my-3 ls-sub-title ">
+                    <h2>My Personal Works</h2>
                     <div class="ls-inner-line" style="border-bottom: 3px solid #fdfeff; border-bottom-style: dotted;">&nbsp;</div>
                 </div>
-                <div class="col-12 d-flex justify-content-center my-5">
-                    <h1>COMING SOON</h1>
+
+                <div class="col-12 col-md-6 justify-content-center my-3 my-md-5">
+                    <div class="box" style="width:100%">
+                        <div class="card">
+                            <img class="card-img-top" src="img/ls-portfolio-1.png" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">ysWebsite</h5>
+                                <p class="card-text">Personal website and resume web template. Build with HTML5, CSS3, Bootstrap4.</p>
+                                <a href="https://yiing-website.firebaseapp.com" target="_blank" class="btn btn-dark">Visit site</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 d-flex justify-content-center my-5">
+
+                <div class="col-12 col-md-6 justify-content-center my-3 my-md-5">
+                    <div class="box" style="width:100%">
+                        <div class="card">
+                            <img class="card-img-top" src="img/ls-portfolio-2.png" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Qia Wan</h5>
+                                <p class="card-text">Simple restaurant searcher website. Build with HTML5, CSS3, Materialize css, basic VueJS.</p>
+                                <a href="https://qiawan-ddd24.firebaseapp.com/index.html" target="_blank" class="btn btn-dark">Visit site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column md 4 for 3 items in one row -->
+
+                <!-- <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
+                    <div class="box" style="width:100%">
+                        <div class="card">
+                            <img class="card-img-top" src="" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Counter layout -->
+
+                <div class="col-12 d-flex justify-content-center my-2">
+                    <h4>Other projects are coming soon</h4>
+                </div>
+                <div class="col-12 d-flex justify-content-center my-2">
                     <div class="ls-counter my-md-5"></div>
                 </div>
 
                 <!-- Custom Javascript -->
                 <script src="app.js"></script>
-
-                <!-- Row for portfolios -->
-
-                <!-- <div class="row ls-portfolio-products">
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mb-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p1.jpeg" class="img-fluid" alt="Portfolio-1" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mb-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p2.jpeg" class="img-fluid" alt="Portfolio-2" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mb-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p3.jpeg" class="img-fluid" alt="Portfolio-3" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mt-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p4.jpeg" class="img-fluid" alt="Portfolio-4" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mt-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p5.jpeg" class="img-fluid" alt="Portfolio-5" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 d-flex justify-content-center my-5 mt-md-0">
-                        <div class="ls-porfolio-holder" style="width:80%;height:80%">
-                            <div class="ls-prtfolio-body">
-                                <img src="img/ls-p6.jpeg" class="img-fluid" alt="Portfolio-6" >
-                                <p class="my-1">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                        </div>
-                    </div>  -->
-
-                </div>
             </div>
         </div>
     </section>
@@ -286,27 +238,21 @@
     <footer class="ls-contact my-5">
         <div id="footer-contact" class="container">
             <div class="row d-flex">
-                <div class="col-12 ls-contact-title text-center my-5 ">
-                    <h3>CONTACT ME</h3>
+                <div class="col-12 ls-contact-title text-center my-3 ls-sub-title">
+                    <h2>Contact Me</h2>
                     <div class="ls-inner-line">&nbsp;</div>
                 </div>
-                    <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap">
-                        <h6 class="w-100 text-center py-2">Contact me now</h6>
-                        <div>hyccc94@gmail.com <img src="img/ls-gmail-small-icon.png" class="img-fluid animated infinite pulse" alt=""></div>
-                        <div>+601112351931 <img src="img/ls-call-icon.png" class="img-fluid" alt=""></div>
+                <div class="col-12 d-flex justify-content-center flex-wrap">
+                    <h6 class="w-100 text-center py-2">"I can't sleep because I have internet connection."</h6>
+                    <div class="d-flex justify-content-between">
+                        <div><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank"><i class="fab fa-facebook-square fa-4x"></i></a></div>
+                        <div><a href="https://www.instagram.com/luisychun/" target="_blank"><i class="fab fa-instagram fa-4x"></i></a></div>
+                        <div><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></div>
+                        <div><a href="https://plus.google.com/101939838670246490695" target="_blank"><i class="fab fa-google-plus-square fa-4x"></i></a></div>
                     </div>
-
-                    <div class="col-12 col-md-6 d-flex justify-content-center flex-wrap">
-                        <h6 class="w-100 text-center py-2">"I can't sleep because I have internet connection."</h6>
-                        <div class="d-flex justify-content-between">
-                            <div><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank"><i class="fab fa-facebook-square fa-4x"></i></a></div>
-                            <div><a href="https://www.instagram.com/luisychun/" target="_blank"><i class="fab fa-instagram fa-4x"></i></a></div>
-                            <div><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></div>
-                            <div><a href="https://plus.google.com/101939838670246490695" target="_blank"><i class="fab fa-google-plus-square fa-4x"></i></a></div>
-                        </div>
-                    </div> 
+                </div> 
                     
-                    <div class="col-12 ls-contact-title text-center my-3 ">2018 &copy; This website is developed by luisyc.com</div>
+                    <div class="col-12 ls-contact-title text-center my-3 ">2018. This website is developed by luisyc</div>
                 </div>
             </div>
         </div>
@@ -314,9 +260,24 @@
 
     <!-- Scroll Reveal JS -->
     <script>
-        window.sr = ScrollReveal({reset: true});
+        window.sr = ScrollReveal({reset: false});
         sr.reveal('.ls-about-scroll-animated',{ duration:3000 , origin:'bottom', opacity:0.5, scale: 0.5});
         sr.reveal('.ls-connect-animated', {duration:2000 , origin:'bottom', scale: 0.5});
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5ac18ccbd7591465c70919e3/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 </body>
 </html>

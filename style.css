@@ -6,11 +6,14 @@ body {
     font-family: 'Lato', Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
-    letter-spacing: 3.5px;
+    letter-spacing: 2.5px;
     color: #333;
     overflow-x: hidden;
-    background-color: #fdfeff;
+    background-color: #efefef;
     height: 100%;
+}
+h2 {
+    font-size: 2.2rem;
 }
 span {
     display: inline-block;
@@ -27,7 +30,7 @@ span {
     text-align: center;
 }
 .ls-header-bg {
-    background-image: url("img/ls-parallax-bg-3.jpeg");
+    background-image: url("img/ls-top-header.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -40,10 +43,6 @@ span {
     width: 100vw;
     overflow: hidden;
 }
-/* .ls-header-bg video {
-    min-width: 100%;
-    min-height: 100%;
-} */
 .ls-header-overlay {
     height: 100vh;
     width: 100vw;
@@ -51,34 +50,29 @@ span {
     top: 0;
     left: 0;
     background: #65737e;
-    opacity: 0.75;
+    opacity: 0.65;
 }
 .ls-header-content {
     color: #fdfeff;
-    font-size: 27px;
-    letter-spacing: 6px;
-    z-index: 2;   
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    z-index: 2;  
+    margin: 0 auto; 
 }
 .ls-header-content h1 {   
-     font-family: 'Lato', cursive; 
-     margin-bottom: 1rem; 
+    font-family: 'Lato', cursive; 
+    margin-bottom: 1rem; 
+}
+.ls-sub-title, .card-title{
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold !important;
 }
 #ls-icon-animated {
     font-size: 42px;
-    color: #c0c5ce;
+    color: #fff;
     margin-top: 10px;
+    cursor: pointer;
 }
-/* .ls-header-content button {
-    margin-top: 0.7rem;
-    background-color: #fdfeff;
-    color:  #405888;
-    font-size: 22px;
-    animation-iteration-count: 2;
-} 
-.ls-header-content button:hover {
-    background-color: #405888 ;
-    color:#fdfeff ;
-}  */
 .ls-inner-line{
     width: 20%;
     height: 1px;
@@ -92,20 +86,20 @@ span {
     margin: 0px auto;
 }
 .ls-about {
-    background-color:#fdfeff;
+    background-color:#efefef;
     font-size: 1.2rem;
 }
-.ls-about-profile-holder img {
+/* .ls-about-profile-holder img {
     box-shadow:0 23px 40px rgba(0,0,0,0.2);
     border-radius: 50%;
     flex: 1;
-    height: 325px;
-}
+    height: 425px;
+} */
 .ls-about-bio {
     flex: 2;
 }
 .ls-services {
-    background-image: linear-gradient(to bottom, rgba(167,173,186,0.95) 0%,rgba(0,0,0,0.6) 100%), url("img/ls-parallax-bg-2.jpeg");
+    background-image: linear-gradient(to bottom, rgba(167,173,186,1) 25%,rgba(0,0,0,0.7) 100%), url("img/ls-top-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -136,13 +130,17 @@ span {
     width: 100vw;
     color: #fdfeff;
 }
-/* .ls-portfolio-body {
-    height: inherit;
+.card {
+    width: 18rem;
+    margin: 0 auto;
 }
-.ls-portfolio-body img {
-    height: 60%;
-    border-radius: 15px 15px 15px 15px;
-} */
+.card-body {
+    font-size: 1.2rem;
+    color: #333;
+}
+.card-text {
+    height: 140px;
+}
 .ls-counter {
     font-family: 'Lato', Arial, sans-serif;
     font-size: 2rem;
@@ -181,6 +179,23 @@ ul li {
         padding: 5px !important;
     }
 }
+@media(max-width:360px) {
+    .card {
+        width: 12rem !important;
+    }
+    .card-body {
+        font-size: .75rem !important;
+    }
+    .card-text {
+        height: 100px !important;
+    }
+}
+@media(max-width:370px) {
+    .ls-pic-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
 @media(max-width:412px) {
     body {
         font-size: 1rem;
@@ -190,14 +205,26 @@ ul li {
         height: 225px;
     }
 }
+@media(max-width: 528px) {
+    .ls-pic-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media(max-width:768px) {
+    .card {
+        margin: 0 auto;
+    }
+}
 @media(max-width:780px) {
     .ls-porfolio-holder {
         height: 382px !important;
     }
     .ls-about-desc {
-        text-align: center !important;
+        text-align: left !important;
         padding-right: 10px;
         padding-left: 10px;
+        font-size: 1rem !important;
     }
     .ls-about img {
         padding-right: 10px;
@@ -231,6 +258,14 @@ ul li {
         height: 150px !important;
     }
 }
+@media(max-width: 1010px) {
+    .card {
+        width: 14rem;
+    }
+    .card-body {
+        font-size: 1rem;
+    }
+}
 @media(max-width:1000px) {
     .ls-about-profile-holder img {
         max-width: 80%;
@@ -253,8 +288,9 @@ ul li {
 /* Scroll up animation */
 
 #return-to-top {
+    z-index: 999;
     position: fixed;
-    bottom: 20px;
+    bottom: 45px;
     right: 20px;
     background: rgb(0, 0, 0);
     width: 50px;
