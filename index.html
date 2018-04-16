@@ -1,41 +1,47 @@
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115575154-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-115575154-1');
-    </script>   
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Poor+Story|Ubuntu+Mono" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title>Luis | Home</title>
+    <title>Luis | Website | Home</title>
 </head>
+
 <body>
-    <a href="javascript: " id="return-to-top"> <i class="fas fa-arrow-up"></i></a>
+    <a href="javascript: " id="return-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script>
-        // Scroll Top
-        $(window).scroll(function() {
-            if ($(this).scrollTop() >= 220) {       
-                $('#return-to-top').fadeIn(200);    
+        /* Scroll to top function */
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 220) {
+                $('#return-to-top').fadeIn(200);
             } else {
-                $('#return-to-top').fadeOut(200);  
+                $('#return-to-top').fadeOut(200);
             }
         });
-        $('#return-to-top').click(function() {      
+        $('#return-to-top').click(function () {
             $('body,html').animate({
-                scrollTop : 0                       
+                scrollTop: 0
             }, 750);
         });
     </script>
@@ -44,34 +50,37 @@
         <div id="particles-js" class="ls-header-bg"></div>
         <div class="ls-header-overlay"></div>
         <div class="ls-header-content">
-            <h1>Hola amigo, I'm <em>Luis</em></h1>
+            <h1>Hola amigo, I'm
+                <em>Luis</em>
+            </h1>
             <h2>Glad you're here :) keep scrolling for a little about me</h2>
             <p id="ls-icon-animated" class="fa"></p>
 
-            <!--Change Icon in header page -->
             <script>
-            function iconChange() {
-                let icon = document.getElementById('ls-icon-animated');
-                icon.innerHTML = "&#xf107;";
+                /* Animate icon in header page */
+                function iconChange() {
+                    let icon = document.getElementById('ls-icon-animated');
+                    icon.innerHTML = "&#xf107;";
 
-                setTimeout(function(){
-                    icon.innerHTML = "&#xf103;";
-                }, 1500);
-            }
+                    setTimeout(function () {
+                        icon.innerHTML = "&#xf103;";
+                    }, 1500);
+                }
 
-            iconChange();
+                iconChange();
 
-            setInterval(iconChange, 3000);  
+                setInterval(iconChange, 3000);
 
-            $("#ls-icon-animated").click(function() {
-                $('html, body').animate({
-                    scrollTop: $(".ls-about").offset().top
-                }, 800);
-            });        
+                /* Click and scroll to about section */
+                $("#ls-icon-animated").click(function () {
+                    $('html, body').animate({
+                        scrollTop: $(".ls-about").offset().top
+                    }, 800);
+                });        
             </script>
         </div>
 
-    </header> 
+    </header>
 
     <section class="ls-about my-5 my-md-3">
         <div class="container">
@@ -83,21 +92,29 @@
                 <div class="col-lg-12 ls-about-bio d-flex my-3">
                     <div class="pl-lg-5 pt-1 pt-lg-0 text-center">
                         <div class="ls-about-scroll-animated d-flex justify-content-center">
-                            <div><img src="img/ls-student.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
-                            <div><img src="img/ls-read.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
-                            <div><img src="img/ls-programmer.png" alt="" class="img-fluid mx-2 ls-pic-icon"></div>
+                            <div>
+                                <img src="img/ls-student.png" alt="" class="img-fluid mx-2 ls-pic-icon">
+                            </div>
+                            <div>
+                                <img src="img/ls-read.png" alt="" class="img-fluid mx-2 ls-pic-icon">
+                            </div>
+                            <div>
+                                <img src="img/ls-programmer.png" alt="" class="img-fluid mx-2 ls-pic-icon">
+                            </div>
                         </div>
-                        <p class="mt-3 ls-about-desc mx-2" style="text-align: center ; font-size: 1.6rem">Hey, my name is Luis, I'm 24 years old, and I'm from Johor, Malaysia. I describe myself as a student, developer that has passion in developing custom website. However, I'm still consider as a newbie to web programming so now I only focusing on the front-end development.</p>
-                    </div>  
+                        <p class="mt-3 ls-about-desc mx-2" style="text-align: center ; font-size: 1.6rem">Hey, my name is Luis, I'm 24 years old, and I'm from Johor, Malaysia. I describe myself as a student,
+                            developer that has passion in developing custom website. However, I'm still consider as a newbie
+                            to web programming so now I only focusing on the front-end development.</p>
+                    </div>
                 </div>
             </div>
-        </div> 
-        
+        </div>
+
         <!-- Particle JS -->
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
-            particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('callback - particles.js config loaded');
+            particlesJS.load('particles-js', 'particles.json', function () {
+                console.log('callback - particles.js config loaded');
             }); 
         </script>
 
@@ -115,14 +132,16 @@
                 </div>
                 <div class="ls-services-text col-6 p-3 order-md-2">
                     <h3>Front-End Web Development</h3>
-                    <p>Creates the look, layout, and features of a website. Governs everything involved with the visual aesthetics, usability of a website and everything else related to the visual aspects of the UI/UX.</p>
+                    <p>Creates the look, layout, and features of a website. Governs everything involved with the visual aesthetics,
+                        usability of a website and everything else related to the visual aspects of the UI/UX.</p>
                 </div>
             </div>
 
             <div class="ls-services-holder d-flex flex-wrap py-4">
                 <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
                     <h3>Data Analysis</h3>
-                    <p>Data Analysis is the process of systematically applying statistical and/or logical techniques to describe and illustrate, condense and recap, and evaluate data.</p>
+                    <p>Data Analysis is the process of systematically applying statistical and/or logical techniques to describe
+                        and illustrate, condense and recap, and evaluate data.</p>
                 </div>
                 <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
                     <img src="img/ls-analysis.png" class="img-fluid" alt="mobile application">
@@ -135,10 +154,11 @@
                 </div>
                 <div class="ls-services-text col-6 p-3 order-md-2">
                     <h3>Search Engine Optimization</h3>
-                    <p>SEO is the process of getting traffic from the “free,” “organic,” “editorial” or “natural” search results on search engines.</p>
+                    <p>SEO is the process of getting traffic from the “free,” “organic,” “editorial” or “natural” search results
+                        on search engines.</p>
                 </div>
-            </div> 
-        
+            </div>
+
             <div class="ls-services-holder d-flex flex-wrap py-4">
                 <div class="ls-services-text col-6 p-3 order-lg-first order-md-first order-last order-sm-last">
                     <h3>Looking for a Team?</h3>
@@ -147,7 +167,7 @@
                 <div class="ls-services-list col-md-6 order-lg-last order-md-last order-first order-sm-first">
                     <img src="img/ls-team.png" class="img-fluid" alt="team">
                 </div>
-            </div>     
+            </div>
         </div>
     </section>
 
@@ -160,11 +180,31 @@
                 </div>
                 <div class="ls-connect-animated col-12 col-md-12 text-center d-flex justify-content-center">
                     <div class="d-flex justify-content-between">
-                        <div class="m-1"><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank" ><img src="img/ls-facebook.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://www.instagram.com/luisychun/" target="_blank"><img src="img/ls-instagram.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><img src="img/ls-linkedin.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://plus.google.com/101939838670246490695" target="_blank"><img src="img/ls-google-plus.png" class="img-fluid" alt=""></a></div>
-                        <div class="m-1"><a href="https://github.com/cc1683" target="_blank"><img src="img/ls-github.png" class="img-fluid" alt=""></a></div>
+                        <div class="m-1">
+                            <a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank">
+                                <img src="img/ls-facebook.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="m-1">
+                            <a href="https://www.instagram.com/luisychun/" target="_blank">
+                                <img src="img/ls-instagram.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="m-1">
+                            <a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank">
+                                <img src="img/ls-linkedin.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="m-1">
+                            <a href="https://plus.google.com/101939838670246490695" target="_blank">
+                                <img src="img/ls-google-plus.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="m-1">
+                            <a href="https://github.com/cc1683" target="_blank">
+                                <img src="img/ls-github.png" class="img-fluid" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,7 +212,8 @@
     </section>
 
     <section class="ls-portfolio my-5 p-5">
-        <div class="container"> <!-- For: 3 items in one row -> style="max-width: 1200px" -->
+        <div class="container">
+            <!-- For: 3 items in one row :: style="max-width: 1200px" -->
             <div class="row">
                 <div class="col-12 ls-portfolio-title text-center my-3 ls-sub-title ">
                     <h2>My Personal Works</h2>
@@ -245,28 +286,44 @@
                 <div class="col-12 d-flex justify-content-center flex-wrap">
                     <h6 class="w-100 text-center py-2">"I can't sleep because I have internet connection."</h6>
                     <div class="d-flex justify-content-between">
-                        <div><a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank"><i class="fab fa-facebook-square fa-4x"></i></a></div>
-                        <div><a href="https://www.instagram.com/luisychun/" target="_blank"><i class="fab fa-instagram fa-4x"></i></a></div>
-                        <div><a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></div>
-                        <div><a href="https://plus.google.com/101939838670246490695" target="_blank"><i class="fab fa-google-plus-square fa-4x"></i></a></div>
+                        <div>
+                            <a href="https://en-gb.facebook.com/people/Luis-YChun/100001225879357" target="_blank">
+                                <i class="fab fa-facebook-square fa-4x"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/luisychun/" target="_blank">
+                                <i class="fab fa-instagram fa-4x"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/yong-chun-hau-0012a9158/" target="_blank">
+                                <i class="fab fa-linkedin fa-4x"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://plus.google.com/101939838670246490695" target="_blank">
+                                <i class="fab fa-google-plus-square fa-4x"></i>
+                            </a>
+                        </div>
                     </div>
-                </div> 
-                    
-                    <div class="col-12 ls-contact-title text-center my-3 ">2018. This website is developed by luisyc</div>
                 </div>
+
+                <div class="col-12 ls-contact-title text-center my-3 ">2018. This website is developed by luisyc</div>
             </div>
+        </div>
         </div>
     </footer>
 
     <!-- Scroll Reveal JS -->
     <script>
-        window.sr = ScrollReveal({reset: false});
-        sr.reveal('.ls-about-scroll-animated',{ duration:3000 , origin:'bottom', opacity:0.5, scale: 0.5});
-        sr.reveal('.ls-connect-animated', {duration:2000 , origin:'bottom', scale: 0.5});
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('.ls-about-scroll-animated', { duration: 3000, origin: 'bottom', opacity: 0.5, scale: 0.5 });
+        sr.reveal('.ls-connect-animated', { duration: 2000, origin: 'bottom', scale: 0.5 });
     </script>
 
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -276,8 +333,30 @@
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
         })();
-    </script>
+    </script> -->
     <!--End of Tawk.to Script-->
 
+    <!-- WhatsHelp.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "60167481683", // WhatsApp number
+                email: "yongchun1683@gmail.com", // Email
+                company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+                greeting_message: "Hello, how may we help you? Just send us a message now to get assistance.", // Text of greeting message
+                call_to_action: "Contact me", // Call to action
+                button_color: "#666666", // Color of button
+                position: "left", // Position may be 'right' or 'left'
+                order: "whatsapp,email", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /WhatsHelp.io widget -->
+
 </body>
+
 </html>

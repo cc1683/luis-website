@@ -290,7 +290,7 @@ ul li {
 #return-to-top {
     z-index: 999;
     position: fixed;
-    bottom: 45px;
+    bottom: 20px;
     right: 20px;
     background: rgb(0, 0, 0);
     width: 50px;
