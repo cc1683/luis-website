@@ -1,6 +1,15 @@
 <html lang="en">
-
 <head>
+    <!-- Data Layer Testing -->
+    <script>
+        dataLayer = [
+            {'pageCategory': 'myWebsite'},
+            {'visitorType': 'high-value'},
+        ];
+        dataLayer.push({'event': 'contactMe'})
+
+        // <a href="" name="download" onclick="dataLayer.push({'event': 'downloadResume'})">
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115575154-1"></script>
     <script>
@@ -17,32 +26,33 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Poor+Story|Ubuntu+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <title>Luis | Website | Home</title>
 </head>
 
 <body>
-    <a href="javascript: " id="return-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <a href="javascript:" id="scroll-to-top">
+        <i class="fas fa-angle-up"></i>
     </a>
 
     <script>
-        /* Scroll to top function */
+        /* Click and scroll to top */
         $(window).scroll(function () {
             if ($(this).scrollTop() >= 220) {
-                $('#return-to-top').fadeIn(200);
+                $('#scroll-to-top').fadeIn(200);
             } else {
-                $('#return-to-top').fadeOut(200);
+                $('#scroll-to-top').fadeOut(200);
             }
         });
-        $('#return-to-top').click(function () {
+        $('#scroll-to-top').click(function () {
             $('body,html').animate({
                 scrollTop: 0
-            }, 750);
+            }, 800);
         });
     </script>
 
@@ -50,14 +60,12 @@
         <div id="particles-js" class="ls-header-bg"></div>
         <div class="ls-header-overlay"></div>
         <div class="ls-header-content">
-            <h1>Hola amigo, I'm
-                <em>Luis</em>
-            </h1>
+            <h1>Hola amigo, I'm <strong>Luis</strong></h1>
             <h2>Glad you're here :) keep scrolling for a little about me</h2>
             <p id="ls-icon-animated" class="fa"></p>
 
             <script>
-                /* Animate icon in header page */
+                /* Animate icon */
                 function iconChange() {
                     let icon = document.getElementById('ls-icon-animated');
                     icon.innerHTML = "&#xf107;";
@@ -79,8 +87,8 @@
                 });        
             </script>
         </div>
-
     </header>
+    <!-- end header  -->
 
     <section class="ls-about my-5 my-md-3">
         <div class="container">
@@ -111,14 +119,14 @@
         </div>
 
         <!-- Particle JS -->
-        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
             particlesJS.load('particles-js', 'particles.json', function () {
                 console.log('callback - particles.js config loaded');
             }); 
-        </script>
-
+        </script> -->
     </section>
+    <!-- end about section -->
 
     <section class="ls-services w-100 p-5 mx-0">
         <div class="col-12 ls-services-title text-center my-3 ls-sub-title ">
@@ -170,6 +178,7 @@
             </div>
         </div>
     </section>
+    <!-- end services section -->
 
     <section class="ls-follow my-5 p-5">
         <div class="container">
@@ -210,6 +219,7 @@
             </div>
         </div>
     </section>
+    <!-- end follow section -->
 
     <section class="ls-portfolio my-5 p-5">
         <div class="container">
@@ -219,8 +229,14 @@
                     <h2>My Personal Works</h2>
                     <div class="ls-inner-line" style="border-bottom: 3px solid #fdfeff; border-bottom-style: dotted;">&nbsp;</div>
                 </div>
+            </div>
 
-                <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
+            <div class="row" id="ls-portfolio-component">
+                <ls-portfolio-showcase></ls-portfolio-showcase>
+            </div>
+            
+    
+                <!-- <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
                     <div class="box" style="width:100%">
                         <div class="card">
                             <img class="card-img-top" src="img/ls-portfolio-1.png" alt="">
@@ -246,7 +262,7 @@
                     </div>
                 </div>
 
-                <!-- Column md 4 for 3 items in one row -->
+                
 
                 <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
                     <div class="box" style="width:100%">
@@ -259,7 +275,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- Column md 4 for 3 items in one row -->
 
                 <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
                     <div class="box" style="width:100%">
@@ -283,11 +301,12 @@
                     <div class="ls-counter my-md-5"></div>
                 </div>
 
-                <!-- Custom Javascript -->
-                <script src="app.js"></script>
-            </div>
+                
+                <script src="counter.js"></script>
+                <!-- Couter Javascript -->
         </div>
     </section>
+    <!-- end portfolio section -->
 
     <footer class="ls-contact my-5">
         <div id="footer-contact" class="container">
@@ -327,7 +346,8 @@
         </div>
         </div>
     </footer>
-
+    <!-- end footer section -->
+    <script src="main.js"></script>
     <!-- Scroll Reveal JS -->
     <script>
         window.sr = ScrollReveal({ reset: false });
