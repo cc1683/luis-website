@@ -25,6 +25,7 @@ Vue.component('ls-portfolio-showcase', {
                 {projectImg: 'img/ls-portfolio-1.png', projectName: 'ysWebsite', projectDesc: 'Personal website and resume web template. Build with HTML5, CSS3, Bootstrap4.', projectUrl: 'https://yiing-website.firebaseapp.com'},
                 {projectImg: 'img/ls-portfolio-2.png', projectName: 'Qia Wan', projectDesc: 'Simple restaurant searcher website. Build with HTML5, CSS3, Materialize css, basic VueJS.', projectUrl: 'https://qiawan-ddd24.firebaseapp.com/index.html'},
                 {projectImg: 'img/ls-portfolio-3.png', projectName: 'Filteritout', projectDesc: 'Photo filter website. Build with HTML, CSS, Bulma and CamanJS.', projectUrl: 'https://cc1683.github.io/filteritout'},
+                {projectImg: 'img/ls-portfolio-4.png', projectName: 'Ez-Git-ing', projectDesc: 'Basic Git Documentation. Build with HTML, CSS, Spectre CSS.', projectUrl: 'https://cc1683.github.io/ez-Git-ing/'},
             ],
         }
     }
