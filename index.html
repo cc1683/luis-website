@@ -1,15 +1,5 @@
 <html lang="en">
 <head>
-    <!-- Data Layer Testing -->
-    <script>
-        dataLayer = [
-            {'pageCategory': 'myWebsite'},
-            {'visitorType': 'high-value'},
-        ];
-        dataLayer.push({'event': 'contactMe'})
-
-        // <a href="" name="download" onclick="dataLayer.push({'event': 'downloadResume'})">
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115575154-1"></script>
     <script>
@@ -24,15 +14,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <title>Luis | Website | Home</title>
+    <title>Luis | Home</title>
 </head>
 
 <body>
@@ -40,64 +31,25 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <script>
-        /* Click and scroll to top */
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 220) {
-                $('#scroll-to-top').fadeIn(200);
-            } else {
-                $('#scroll-to-top').fadeOut(200);
-            }
-        });
-        $('#scroll-to-top').click(function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 800);
-        });
-    </script>
-
     <header class="ls-header container">
-        <div id="particles-js" class="ls-header-bg"></div>
+        <div class="ls-header-bg"></div>
         <div class="ls-header-overlay"></div>
         <div class="ls-header-content">
             <h1>Hola amigo, I'm <strong>Luis</strong></h1>
             <h2>Glad you're here :) keep scrolling for a little about me</h2>
             <p id="ls-icon-animated" class="fa"></p>
-
-            <script>
-                /* Animate icon */
-                function iconChange() {
-                    let icon = document.getElementById('ls-icon-animated');
-                    icon.innerHTML = "&#xf107;";
-
-                    setTimeout(function () {
-                        icon.innerHTML = "&#xf103;";
-                    }, 1500);
-                }
-
-                iconChange();
-
-                setInterval(iconChange, 3000);
-
-                /* Click and scroll to about section */
-                $("#ls-icon-animated").click(function () {
-                    $('html, body').animate({
-                        scrollTop: $(".ls-about").offset().top
-                    }, 800);
-                });        
-            </script>
         </div>
     </header>
     <!-- end header  -->
 
     <section class="ls-about my-5 my-md-3">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 ls-about-title text-center my-3 ls-sub-title ">
+                <div class="ls-about-title ls-sub-title col-12 text-center my-3">
                     <h2>About Luis</h2>
                     <div class="ls-inner-line">&nbsp;</div>
                 </div>
-                <div class="col-lg-12 ls-about-bio d-flex my-3">
+                <div class="col-12 col-md-6 ls-about-bio d-flex my-3 p-0 p-md-5">
                     <div class="pl-lg-5 pt-1 pt-lg-0 text-center">
                         <div class="ls-about-scroll-animated d-flex justify-content-center">
                             <div>
@@ -110,9 +62,49 @@
                                 <img src="img/ls-programmer.png" alt="" class="img-fluid mx-2 ls-pic-icon">
                             </div>
                         </div>
-                        <p class="mt-3 ls-about-desc mx-2" style="text-align: center ; font-size: 1.6rem">Hey, my name is Luis, I'm 24 years old, and I'm from Johor, Malaysia. I describe myself as a student,
-                            developer that has passion in developing custom website. However, I'm still consider as a newbie
-                            to web programming so now I only focusing on the front-end development.</p>
+                        <p class="mt-3 ls-about-desc mx-2" style="text-align: center ; font-size: 1.6rem">Hey, my name is Luis, I'm 24 years old, from Johor, Malaysia. I describe myself as a student,
+                            developer that has passion in developing custom website.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-3 pt-0 pt-md-5">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card w-100">
+                            <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link resume-click-control" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Education
+                                </button>
+                            </h5>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul>
+                                    <li><i class="fas fa-location-arrow"></i><strong>Bachelor of Computer Science in Network Computing</strong> - University Malaysia Sarawak</li>
+                                    <li><i class="fas fa-location-arrow"></i><strong>STPM</strong> - Dato Penggawa Timur National Secondary School</li>
+                                    <li><i class="fas fa-location-arrow"></i><strong>SPM</strong> - Taman Megah Ria National Secondary School</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card w-100">
+                            <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link resume-click-control collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Work Experience
+                                </button>
+                            </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul>
+                                    <li><i class="fas fa-location-arrow"></i> - Internship as web developer at IT Wonders</li>
+                                    <li><i class="fas fa-location-arrow"></i> - Administrator at Newton Tuition Center</li>
+                                    <li><i class="fas fa-location-arrow"></i> - Customer Representative at Perfect One Network Sdn.Bhd.</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,7 +214,7 @@
     <!-- end follow section -->
 
     <section class="ls-portfolio my-5 p-5">
-        <div class="container">
+        <div class="container" style="max-width: 1200px;">
             <!-- For: 3 items in one row :: style="max-width: 1200px" -->
             <div class="row">
                 <div class="col-12 ls-portfolio-title text-center my-3 ls-sub-title ">
@@ -370,7 +362,7 @@
     <!--End of Tawk.to Script-->
 
     <!-- WhatsHelp.io widget -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         (function () {
             var options = {
                 whatsapp: "60167481683", // WhatsApp number
@@ -387,8 +379,47 @@
             s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
-    </script>
+    </script> -->
     <!-- /WhatsHelp.io widget -->
+
+    <script>
+        /* Click and scroll to top */
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 220) {
+                $('#scroll-to-top').fadeIn(200);
+            } else {
+                $('#scroll-to-top').fadeOut(200);
+            }
+        });
+        $('#scroll-to-top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800, 'easeInQuint');
+        });
+    </script>
+
+<script>
+    /* Animate icon */
+    function iconChange() {
+        let icon = document.getElementById('ls-icon-animated');
+        icon.innerHTML = "&#xf107;";
+
+        setTimeout(function () {
+            icon.innerHTML = "&#xf103;";
+        }, 1500);
+    }
+
+    iconChange();
+
+    setInterval(iconChange, 3000);
+
+    /* Click and scroll to about section */
+    $("#ls-icon-animated").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".ls-about").offset().top
+        }, 800);
+    });        
+</script>
 
 </body>
 

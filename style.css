@@ -3,10 +3,8 @@
 }
 body {
     margin: 0;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
-    line-height: 1.5;
-    letter-spacing: 2.5px;
     color: #333;
     overflow-x: hidden;
     background-color: #eee;
@@ -30,7 +28,7 @@ span {
     text-align: center;
 }
 .ls-header-bg {
-    background-image: url("img/ls-top-header.jpeg");
+    background-image: url("img/ls-top-bg.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -50,7 +48,7 @@ span {
     top: 0;
     left: 0;
     background: #65737e;
-    opacity: 0.25;
+    opacity: 0.75;
 }
 .ls-header-content {
     color: #fdfeff;
@@ -171,11 +169,28 @@ ul li {
     color:#4f5b66;
 }
 
+button.resume-click-control {
+    font-size: 1.5rem;
+    color: #333;
+    width: 100%;
+}
+.btn-link:hover {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+.card-body ul {
+    padding: 0 !important;
+}
 /* Media Query */
 
 @media(max-width:350px) {
     .ls-counter div {
         padding: 5px !important;
+    }
+}
+@media(max-width:365px) {
+    button.resume-click-control {
+        font-size: 1rem;
     }
 }
 @media(max-width:360px) {
@@ -189,12 +204,7 @@ ul li {
         height: 100px !important;
     }
 }
-@media(max-width:370px) {
-    .ls-pic-icon {
-        width: 80px !important;
-        height: 80px !important;
-    }
-}
+
 @media(max-width:412px) {
     body {
         font-size: 1rem;
@@ -204,12 +214,7 @@ ul li {
         height: 225px;
     }
 }
-@media(max-width: 528px) {
-    .ls-pic-icon {
-        width: 100px;
-        height: 100px;
-    }
-}
+
 @media(max-width:768px) {
     .card {
         margin: 0 auto;
