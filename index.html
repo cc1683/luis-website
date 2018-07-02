@@ -109,14 +109,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Particle JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <script>
-            particlesJS.load('particles-js', 'particles.json', function () {
-                console.log('callback - particles.js config loaded');
-            }); 
-        </script> -->
     </section>
     <!-- end about section -->
 
@@ -215,7 +207,6 @@
 
     <section class="ls-portfolio my-5 p-5">
         <div class="container" style="max-width: 1200px;">
-            <!-- For: 3 items in one row :: style="max-width: 1200px" -->
             <div class="row">
                 <div class="col-12 ls-portfolio-title text-center my-3 ls-sub-title ">
                     <h2>My Personal Works</h2>
@@ -226,76 +217,19 @@
             <div class="row" id="ls-portfolio-component">
                 <ls-portfolio-showcase></ls-portfolio-showcase>
             </div>
-            
-    
-                <!-- <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
-                    <div class="box" style="width:100%">
-                        <div class="card">
-                            <img class="card-img-top" src="img/ls-portfolio-1.png" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">ysWebsite</h5>
-                                <p class="card-text">Personal website and resume web template. Build with HTML5, CSS3, Bootstrap4.</p>
-                                <a href="https://yiing-website.firebaseapp.com" target="_blank" class="btn btn-dark">Visit site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
-                    <div class="box" style="width:100%">
-                        <div class="card">
-                            <img class="card-img-top" src="img/ls-portfolio-2.png" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Qia Wan</h5>
-                                <p class="card-text">Simple restaurant searcher website. Build with HTML5, CSS3, Materialize css, basic VueJS.</p>
-                                <a href="https://qiawan-ddd24.firebaseapp.com/index.html" target="_blank" class="btn btn-dark">Visit site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Counter layout -->
+
+            <div class="col-12 d-flex justify-content-center my-2">
+                <h4>Other projects are coming soon</h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center my-2">
+                <div class="ls-counter my-md-5"></div>
+            </div>
 
                 
-
-                <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
-                    <div class="box" style="width:100%">
-                        <div class="card">
-                            <img class="card-img-top" src="img/ls-portfolio-3.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Filteritout</h5>
-                                <p class="card-text">Photo filter website. Build with HTML, CSS, Bulma and CamanJS.</p>
-                                <a href="https://cc1683.github.io/filteritout" target="_blank" class="btn btn-dark">Visit site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- Column md 4 for 3 items in one row -->
-
-                <!-- <div class="col-12 col-md-4 justify-content-center my-3 my-md-5">
-                    <div class="box" style="width:100%">
-                        <div class="card">
-                            <img class="card-img-top" src="img/ls-portfolio-4.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">ez-Git-ing</h5>
-                                <p class="card-text">You can find some basic Git commands here. Build with HTML, CSS, Spectre CSS</p>
-                                <a href="https://cc1683.github.io/ez-Git-ing/" target="_blank" class="btn btn-dark">Visit site</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>                 -->
-
-                <!-- Counter layout -->
-
-                <div class="col-12 d-flex justify-content-center my-2">
-                    <h4>Other projects are coming soon</h4>
-                </div>
-                <div class="col-12 d-flex justify-content-center my-2">
-                    <div class="ls-counter my-md-5"></div>
-                </div>
-
-                
-                <script src="counter.js"></script>
-                <!-- Couter Javascript -->
+            <script src="counter.js"></script>
+            <!-- Couter Javascript -->
         </div>
     </section>
     <!-- end portfolio section -->
@@ -398,29 +332,28 @@
         });
     </script>
 
-<script>
-    /* Animate icon */
-    function iconChange() {
-        let icon = document.getElementById('ls-icon-animated');
-        icon.innerHTML = "&#xf107;";
+    <script>
+        /* Animate icon */
+        function iconChange() {
+            let icon = document.getElementById('ls-icon-animated');
+            icon.innerHTML = "&#xf107;";
 
-        setTimeout(function () {
-            icon.innerHTML = "&#xf103;";
-        }, 1500);
-    }
+            setTimeout(function () {
+                icon.innerHTML = "&#xf103;";
+            }, 1500);
+        }
 
-    iconChange();
+        iconChange();
 
-    setInterval(iconChange, 3000);
+        setInterval(iconChange, 3000);
 
-    /* Click and scroll to about section */
-    $("#ls-icon-animated").click(function () {
-        $('html, body').animate({
-            scrollTop: $(".ls-about").offset().top
-        }, 800);
-    });        
-</script>
+        /* Click and scroll to about section */
+        $("#ls-icon-animated").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".ls-about").offset().top
+            }, 800);
+        });        
+    </script>
 
 </body>
-
 </html>
