@@ -3,15 +3,10 @@
 }
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-    color: #333;
-    overflow-x: hidden;
-    background-color: #eee;
     height: 100%;
-}
-h2 {
-    font-size: 2.2rem;
+    overflow-x: hidden;
+    color: #000;
+    background-color: #efefef;
 }
 span {
     display: inline-block;
@@ -28,10 +23,6 @@ span {
     text-align: center;
 }
 .ls-header-bg {
-    background-image: url("img/ls-top-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
     position: absolute;
     top: 0;
     left: 0;
@@ -39,6 +30,9 @@ span {
     min-height: 100%;
     height: 100vh;
     width: 100vw;
+    background-image: url("img/ls-top-bg.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
     overflow: hidden;
 }
 .ls-header-overlay {
@@ -47,28 +41,30 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    background: #65737e;
-    opacity: 0.75;
+    background: #000000;
+    opacity: 0.8;
 }
 .ls-header-content {
-    color: #fdfeff;
+    color: #efefef;
     font-size: 1.4rem;
-    letter-spacing: 2px;
     z-index: 2;  
     margin: 0 auto; 
 }
 .ls-header-content h1 {   
     margin-bottom: 1rem; 
 }
-.ls-sub-title, .card-title{
-    font-family: 'Ubuntu Mono', monospace;
-    font-weight: bold !important;
-}
 #ls-icon-animated {
     font-size: 42px;
     color: #fff;
     margin-top: 10px;
     cursor: pointer;
+}
+.ls-banner {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #000;
+    color: #efefef;
 }
 .ls-inner-line{
     width: 20%;
