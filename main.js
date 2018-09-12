@@ -28,6 +28,7 @@ Vue.component('ls-portfolio-showcase', {
                 {projectImg: 'img/ls-portfolio-4.png', projectName: 'Ez-Git-ing', projectDesc: 'Basic GIT documentation. Build with HTML5, CSS3, Spectre', projectUrl: 'https://cc1683.github.io/ez-Git-ing/'},
                 {projectImg: 'img/ls-portfolio-5.png', projectName: 'My Wiki Site', projectDesc: 'My minimal personal wiki site that styling with Sakura, based on October CMS and hosted on DigitalOcean', projectUrl: 'http://luisyctech.tk/'},
                 {projectImg: 'img/ls-portfolio-6.png', projectName: 'My Internship', projectDesc: 'My brief intership report. Implemented with fullPage.js and Material Boostrap', projectUrl: 'https://cc1683.github.io/my-internship/'},
+                {projectImg: 'img/ls-portfolio-7.png', projectName: 'BorneoStarAuto', projectDesc: 'A simple website to lead potential customer to reach clients WhatsApp to place order', projectUrl: 'https://borneostarauto.com/index.html'},
             ],
         }
     }

@@ -82,14 +82,27 @@ span {
     background-color:#efefef;
     font-size: 1.2rem;
 }
-/* .ls-about-profile-holder img {
-    box-shadow:0 23px 40px rgba(0,0,0,0.2);
-    border-radius: 50%;
-    flex: 1;
-    height: 425px;
-} */
+
 .ls-about-bio {
     flex: 2;
+}
+.showcase-text {
+    padding: 3rem !important;
+}
+.showcase-img {
+    min-height: 30rem !important;
+}
+#showcase-img-1 {
+    background-image: url("img/ls-interest-1.jpeg");
+    background-size: cover;
+}
+#showcase-img-2 {
+    background-image: url("img/ls-interest-2.jpeg");
+    background-size: cover;
+}
+#showcase-img-3 {
+    background-image: url("img/ls-interest-3.png");
+    background-size: cover;
 }
 .ls-services {
     background-image: linear-gradient(to bottom, rgba(167,173,186,1) 25%,rgba(0,0,0,0.7) 100%), url("img/ls-top-bg.jpg");
@@ -114,7 +127,7 @@ span {
     min-width: 300px;
 }
 .ls-portfolio {
-    background-image: linear-gradient(to bottom, rgba(101,115,126,0.95) 0%,rgba(0,0,0,0.6) 100%), url("img/ls-parallax-bg-1.jpeg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%,rgba(0,0,0,0.6) 100%), url("img/ls-parallax-bg-1.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
