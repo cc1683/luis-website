@@ -22,7 +22,7 @@ Vue.component('ls-portfolio-showcase', {
     data () {
         return {
             portfolioList: [
-                {projectImg: 'img/ls-portfolio-1.png', projectName: 'ysWebsite', projectDesc: 'Personal website and resume style site. Build with HTML5, CSS3, Bootstrap', projectUrl: 'https://yiing-website.firebaseapp.com'},
+                // {projectImg: 'img/ls-portfolio-1.png', projectName: 'ysWebsite', projectDesc: 'Personal website and resume style site. Build with HTML5, CSS3, Bootstrap', projectUrl: 'https://yiing-website.firebaseapp.com'},
                 {projectImg: 'img/ls-portfolio-2.png', projectName: 'Qia Wan', projectDesc: 'Simple restaurant finder (No Backend) website. Build with HTML5, CSS3, Materialize, Vue', projectUrl: 'https://qiawan-ddd24.firebaseapp.com/index.html'},
                 {projectImg: 'img/ls-portfolio-3.png', projectName: 'Filteritout', projectDesc: 'Photo filter website. Build with HTML5, CSS3, Bulma and CamanJS', projectUrl: 'https://cc1683.github.io/filteritout'},
                 {projectImg: 'img/ls-portfolio-4.png', projectName: 'Ez-Git-ing', projectDesc: 'Basic GIT documentation. Build with HTML5, CSS3, Spectre', projectUrl: 'https://cc1683.github.io/ez-Git-ing/'},
