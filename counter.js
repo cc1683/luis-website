@@ -1,6 +1,6 @@
 const countdown = document.querySelector('.ls-counter');
 
-const lauchDate = new Date('May 11, 2019 12:00:00').getTime();
+const lauchDate = new Date('September 15, 2019 12:00:00').getTime();
 
 const int = setInterval(function(){
     const current = new Date().getTime();
