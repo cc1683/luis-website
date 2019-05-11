@@ -29,7 +29,7 @@ Vue.component('ls-portfolio-showcase', {
                 {projectImg: 'img/ls-portfolio-5.png', projectName: 'My Wiki Site', projectDesc: 'My minimal personal wiki site that styling with Sakura, based on October CMS and hosted on DigitalOcean', projectUrl: 'http://luisyctech.tk/'},
                 {projectImg: 'img/ls-portfolio-6.png', projectName: 'My Internship', projectDesc: 'My brief intership report. Implemented with fullPage.js and Material Boostrap', projectUrl: 'https://cc1683.github.io/my-internship/'},
                 {projectImg: 'img/ls-portfolio-7.png', projectName: 'BorneoStarAuto', projectDesc: 'A simple website to lead potential customer to reach clients WhatsApp to place order', projectUrl: 'https://borneostarauto.com/index.html'},
-                {projectImg: 'img/ls-portfolio-8.png', projectName: 'Emergency Notification Mobile App', projectDesc: 'A hybrid app that used to send an emergency notification to notify linked family members or friends', projectUrl: 'https://github.com/cc1683/emergency-notification-mobile-app'},
+                {projectImg: 'img/ls-portfolio-8.png', projectName: 'Emergency Notification Mobile App', projectDesc: 'A hybrid app that used to send an emergency notification to notify linked family members or friends', projectUrl: 'hhttps://github.com/cc1683/emergency-notification-mobile-app/tree/master/app'},
             ],
         }
     }
